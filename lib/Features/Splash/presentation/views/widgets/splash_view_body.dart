@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty_app/Features/Splash/presentation/views/widgets/sliding_logo.dart';
 
-import '../../../../../Core/utils/assets_data.dart';
 import '../../../../Home/presentation/views/home_view.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -57,18 +57,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Center(
-        child: AnimatedBuilder(
-          animation: slidingAnimation,
-          builder: (context, _) {
-            return SlideTransition(
-              position: slidingAnimation,
-              child: Image.network(
-                AssetsData.logo,
-              ),
-            );
-          },
+        child: SlidingLogo(
+          slidingAnimation: slidingAnimation,
         ),
       ),
     );
