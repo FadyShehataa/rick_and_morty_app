@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rick_and_morty_app/Features/Home/data/models/character/character_model.dart';
 import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/characters_grid_view_item.dart';
+import 'package:rick_and_morty_app/constants.dart';
 
 class CharactersGridView extends StatelessWidget {
   const CharactersGridView({
@@ -11,7 +12,7 @@ class CharactersGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(kPadding),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 0.7,

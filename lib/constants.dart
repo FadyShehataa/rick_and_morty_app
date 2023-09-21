@@ -1,1 +1,1 @@
-const kTransitionDuration = Duration(milliseconds: 400);
+const kPadding = 8.0;

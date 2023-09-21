@@ -26,7 +26,7 @@ class RickAndMortyApp extends StatelessWidget {
         BlocProvider<CharactersCubit>(
           create: (context) => CharactersCubit(
             getIt.get<HomeRepoImpl>(),
-          )..fetchFeaturedBooks(),
+          )..fetchCharacters(),
         ),
       ],
       child: MaterialApp.router(

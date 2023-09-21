@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty_app/Core/utils/styles.dart';
 import 'package:rick_and_morty_app/Features/Home/data/models/character/result.dart';
+import 'package:rick_and_morty_app/constants.dart';
 
 class CharactersGridViewItem extends StatelessWidget {
   const CharactersGridViewItem({super.key, required this.characterResultModel});
@@ -29,14 +31,11 @@ class CharactersGridViewItem extends StatelessWidget {
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(kPadding),
             child: Text(
               characterResultModel.name!,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-              ),
+              style: Styles.textStyle16,
             ),
           ),
         ),

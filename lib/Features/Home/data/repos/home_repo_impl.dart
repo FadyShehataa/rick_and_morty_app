@@ -7,8 +7,8 @@ import 'package:rick_and_morty_app/Features/Home/data/repos/home_repo.dart';
 import '../../../../Core/utils/api_service.dart';
 
 class HomeRepoImpl implements HomeRepo {
-  ApiService apiService;
   HomeRepoImpl(this.apiService);
+  ApiService apiService;
 
   @override
   Future<Either<Failure, CharacterModel>> fetchCharacters() async {

@@ -11,7 +11,7 @@ class CharactersCubit extends Cubit<CharactersState> {
 
   final HomeRepo homeRepo;
 
-  Future<void> fetchFeaturedBooks() async {
+  Future<void> fetchCharacters() async {
     emit(CharactersLoading());
     var result = await homeRepo.fetchCharacters();
 
