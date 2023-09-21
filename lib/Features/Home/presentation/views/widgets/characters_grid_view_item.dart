@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty_app/Features/Home/data/models/character/result.dart';
 
 class CharactersGridViewItem extends StatelessWidget {
-  const CharactersGridViewItem({super.key});
+  const CharactersGridViewItem({super.key, required this.characterResultModel});
+  final Result characterResultModel;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(
-              'https://rickandmortyapi.com/api/character/avatar/1.jpeg'),
+          image: NetworkImage(characterResultModel.image!),
           fit: BoxFit.cover,
         ),
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(10),
         ),
       ),
@@ -27,12 +28,12 @@ class CharactersGridViewItem extends StatelessWidget {
               bottomRight: Radius.circular(10),
             ),
           ),
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Text(
-              'Rick Sanchez',
+              characterResultModel.name!,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 16,
               ),
