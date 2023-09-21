@@ -1,20 +1,59 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_app/Core/utils/assets_data.dart';
 
-class SplashViewBody extends StatelessWidget {
+import '../../../../../Core/utils/assets_data.dart';
+
+class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
+
+  @override
+  State<SplashViewBody> createState() => _SplashViewBodyState();
+}
+
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController animationController;
+  late final Animation<Offset> slidingAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    initSlidingAnimation();
+  }
+
+  void initSlidingAnimation() {
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1500),
+    );
+    slidingAnimation = Tween<Offset>(
+      begin: const Offset(0, 10),
+      end: Offset.zero,
+    ).animate(animationController);
+    animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.network(
-            AssetsData.logo,
-          ),
-        ],
+      child: Center(
+        child: AnimatedBuilder(
+          animation: slidingAnimation,
+          builder: (context, _) {
+            return SlideTransition(
+              position: slidingAnimation,
+              child: Image.network(
+                AssetsData.logo,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
