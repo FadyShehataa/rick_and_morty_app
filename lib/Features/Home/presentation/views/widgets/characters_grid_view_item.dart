@@ -15,9 +15,7 @@ class CharactersGridViewItem extends StatelessWidget {
           image: NetworkImage(characterResultModel.image!),
           fit: BoxFit.cover,
         ),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(10),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
       child: Align(
         alignment: Alignment.bottomCenter,

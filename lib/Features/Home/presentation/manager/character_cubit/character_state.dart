@@ -17,10 +17,6 @@ final class CharactersFailure extends CharactersState {
   const CharactersFailure({required this.errMessage});
 }
 
-final class CharactersSuccess extends CharactersState {
-  final CharacterModel character;
-
-  const CharactersSuccess({required this.character});
-}
+final class CharactersSuccess extends CharactersState {}
 
 final class CharactersSearching extends CharactersState {}

@@ -20,7 +20,7 @@ class CharactersCubit extends Cubit<CharactersState> {
         .where((element) =>
             element.name!.toLowerCase().startsWith(query.toLowerCase()))
         .toList();
-    emit(CharactersSuccess(character: character));
+    emit(CharactersSuccess());
   }
 
   Future<void> fetchCharacters() async {
@@ -32,7 +32,7 @@ class CharactersCubit extends Cubit<CharactersState> {
       (character) {
         this.character = character;
         searchedCharacters = character.results!;
-        emit(CharactersSuccess(character: character));
+        emit(CharactersSuccess());
       },
     );
   }

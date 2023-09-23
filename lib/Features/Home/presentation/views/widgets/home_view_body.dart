@@ -5,6 +5,8 @@ import 'package:rick_and_morty_app/Features/Home/presentation/manager/character_
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/characters_grid_view.dart';
 
+import 'empty_searched_characters.dart';
+
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
@@ -13,7 +15,13 @@ class HomeViewBody extends StatelessWidget {
     return BlocBuilder<CharactersCubit, CharactersState>(
       builder: (context, state) {
         if (state is CharactersSuccess) {
-          return const CharactersGridView();
+          if (BlocProvider.of<CharactersCubit>(context)
+              .searchedCharacters
+              .isEmpty) {
+            return const EmptySearchedCharacters();
+          } else {
+            return const CharactersGridView();
+          }
         } else if (state is CharactersLoading) {
           return const CustomLoadingWidget();
         } else if (state is CharactersFailure) {
