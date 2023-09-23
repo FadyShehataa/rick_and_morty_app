@@ -22,3 +22,5 @@ final class CharactersSuccess extends CharactersState {
 
   const CharactersSuccess({required this.character});
 }
+
+final class CharactersSearching extends CharactersState {}

@@ -13,9 +13,7 @@ class HomeViewBody extends StatelessWidget {
     return BlocBuilder<CharactersCubit, CharactersState>(
       builder: (context, state) {
         if (state is CharactersSuccess) {
-          return CharactersGridView(
-            characterModel: state.character,
-          );
+          return const CharactersGridView();
         } else if (state is CharactersLoading) {
           return const CustomLoadingWidget();
         } else if (state is CharactersFailure) {

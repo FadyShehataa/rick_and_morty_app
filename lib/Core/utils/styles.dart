@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty_app/Core/utils/my_colors.dart';
 
 abstract class Styles {
   static const textStyle14 = TextStyle(
@@ -23,11 +24,14 @@ abstract class Styles {
 
   static const textStyle20 = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.normal,
+    color: MyColors.myWhite,
   );
 
   static const textStyle30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.w400,
   );
+
+  
 }
