@@ -5,7 +5,6 @@ import 'package:rick_and_morty_app/Core/utils/styles.dart';
 import 'package:rick_and_morty_app/Features/Home/presentation/manager/character_cubit/character_cubit.dart';
 import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/home_view_body.dart';
 
-
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -24,7 +23,7 @@ class _HomeViewState extends State<HomeView> {
     setState(() => isSearching = true);
   }
 
-  // function to stop searching
+  // function to stop searching (BackButton)
   void stopSearching() {
     setState(() => isSearching = false);
   }
@@ -35,7 +34,12 @@ class _HomeViewState extends State<HomeView> {
       return [
         IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            if (searchController!.text.isNotEmpty) {
+              searchController!.clear();
+              BlocProvider.of<CharactersCubit>(context).searchCharacter('');
+            } else {
+              Navigator.pop(context);
+            }
           },
           icon: const Icon(Icons.close),
         )
