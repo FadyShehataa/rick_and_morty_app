@@ -2,24 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:rick_and_morty_app/Core/utils/my_colors.dart';
 
 abstract class Styles {
-  static const textStyle14 = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-  );
-
-  static const textStyle15 = TextStyle(
-    fontSize: 15,
-    fontWeight: FontWeight.bold,
-  );
-
   static const textStyle16 = TextStyle(
     fontSize: 16,
     color: Colors.white,
-  );
-
-  static const textStyle18 = TextStyle(
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
   );
 
   static const textStyle20 = TextStyle(
@@ -28,10 +13,22 @@ abstract class Styles {
     color: MyColors.myWhite,
   );
 
-  static const textStyle30 = TextStyle(
-    fontSize: 30,
+  static const textStyle22 = TextStyle(
+    fontSize: 22,
     fontWeight: FontWeight.w400,
+    color: MyColors.myWhite,
   );
 
-  
+  static const textStyle24 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const textStyle40 = TextStyle(
+    fontSize: 40.0,
+  );
+
+  static const textStyle43 = TextStyle(
+    fontSize: 43.0,
+  );
 }

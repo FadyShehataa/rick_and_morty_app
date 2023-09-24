@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/animated_text.dart';
 import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/character_info.dart';
 import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/custom_divider.dart';
 import 'package:rick_and_morty_app/Core/utils/constants.dart';
@@ -24,21 +25,22 @@ class CharacterDetailsViewBody extends StatelessWidget {
               children: [
                 CharacterInfo(
                     title: 'Status : ', value: characterResultModel.status!),
-                const CustomDivider(endIndent: 320),
+                const CustomDivider(endIndent: 305),
                 CharacterInfo(
                     title: 'Species : ', value: characterResultModel.species!),
-                const CustomDivider(endIndent: 310),
+                const CustomDivider(endIndent: 290),
                 CharacterInfo(
                     title: 'Type : ',
                     value: characterResultModel.type!.isEmpty
                         ? 'Unknown'
                         : characterResultModel.type!),
-                const CustomDivider(endIndent: 335),
+                const CustomDivider(endIndent: 320),
                 CharacterInfo(
                     title: 'Gender : ', value: characterResultModel.gender!),
-                const CustomDivider(endIndent: 315),
+                const CustomDivider(endIndent: 300),
+                const AnimatedText(),
                 const SizedBox(
-                  height: 490,
+                  height: 360,
                 )
               ],
             ),
