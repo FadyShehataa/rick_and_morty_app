@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rick_and_morty_app/Features/Home/presentation/manager/character_cubit/character_cubit.dart';
 import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/characters_grid_view_item.dart';
-import 'package:rick_and_morty_app/constants.dart';
+import 'package:rick_and_morty_app/Core/utils/constants.dart';
 
 class CharactersGridView extends StatelessWidget {
   const CharactersGridView({super.key});

@@ -15,7 +15,7 @@ class CharacterDetailsViewAppBar extends StatelessWidget {
       pinned: true,
       stretch: true,
       backgroundColor: MyColors.appBarColor,
-      centerTitle: true,
+      // centerTitle: true,
       flexibleSpace: FlexibleSpaceBar(
         title: Text(characterResultModel.name!),
         background: Hero(
