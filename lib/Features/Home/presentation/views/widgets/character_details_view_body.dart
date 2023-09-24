@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/animated_text.dart';
-import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/character_info.dart';
-import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/custom_divider.dart';
-import 'package:rick_and_morty_app/Core/utils/constants.dart';
+import 'animated_text.dart';
+import 'character_info.dart';
+import 'custom_divider.dart';
+import '../../../../../Core/utils/constants.dart';
 
 import '../../../data/models/character/result.dart';
 

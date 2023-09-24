@@ -1,6 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_app/Core/utils/service_locator.dart';
+import 'Core/utils/service_locator.dart';
 
 import 'Core/utils/app_router.dart';
 

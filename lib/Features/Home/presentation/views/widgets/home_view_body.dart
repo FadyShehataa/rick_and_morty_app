@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_app/Core/widgets/custom_error_widget.dart';
-import 'package:rick_and_morty_app/Core/widgets/custom_loading_widget.dart';
-import 'package:rick_and_morty_app/Features/Home/presentation/manager/character_cubit/character_cubit.dart';
+import '../../../../../Core/widgets/custom_error_widget.dart';
+import '../../../../../Core/widgets/custom_loading_widget.dart';
+import '../../manager/character_cubit/character_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/characters_grid_view.dart';
+import 'characters_grid_view.dart';
 
 import 'empty_searched_characters.dart';
 

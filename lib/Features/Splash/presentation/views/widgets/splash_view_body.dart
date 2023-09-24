@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rick_and_morty_app/Core/utils/app_router.dart';
-import 'package:rick_and_morty_app/Features/Splash/presentation/views/widgets/sliding_logo.dart';
+import '../../../../../Core/utils/app_router.dart';
+import 'sliding_logo.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

@@ -1,6 +1,6 @@
 import 'package:empty_widget/empty_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_app/Core/utils/assets_data.dart';
+import '../../../../../Core/utils/assets_data.dart';
 
 class EmptySearchedCharacters extends StatelessWidget {
   const EmptySearchedCharacters({super.key});

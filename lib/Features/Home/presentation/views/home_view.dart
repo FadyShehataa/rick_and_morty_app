@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_offline/flutter_offline.dart';
-import 'package:rick_and_morty_app/Core/utils/my_colors.dart';
-import 'package:rick_and_morty_app/Core/utils/styles.dart';
-import 'package:rick_and_morty_app/Core/widgets/custom_loading_widget.dart';
-import 'package:rick_and_morty_app/Core/widgets/no_internet_widget.dart';
-import 'package:rick_and_morty_app/Features/Home/presentation/manager/character_cubit/character_cubit.dart';
-import 'package:rick_and_morty_app/Features/Home/presentation/views/widgets/home_view_body.dart';
+import '../../../../Core/utils/my_colors.dart';
+import '../../../../Core/utils/styles.dart';
+import '../../../../Core/widgets/custom_loading_widget.dart';
+import '../../../../Core/widgets/no_internet_widget.dart';
+import '../manager/character_cubit/character_cubit.dart';
+import 'widgets/home_view_body.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

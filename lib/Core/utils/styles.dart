@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_app/Core/utils/my_colors.dart';
+import 'my_colors.dart';
 
 abstract class Styles {
   static const textStyle16 = TextStyle(

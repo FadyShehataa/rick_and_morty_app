@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_app/Core/utils/styles.dart';
+import '../../../../../Core/utils/styles.dart';
 
 class AnimatedText extends StatelessWidget {
   const AnimatedText({

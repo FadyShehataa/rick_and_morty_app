@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rick_and_morty_app/Features/Home/data/models/character/character_model.dart';
+import '../../../data/models/character/character_model.dart';
 
 import '../../../data/models/character/result.dart';
 import '../../../data/repos/home_repo.dart';

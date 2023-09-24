@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty_app/Core/utils/styles.dart';
-import 'package:rick_and_morty_app/Features/Home/data/models/character/result.dart';
+import '../../../../../Core/utils/styles.dart';
+import '../../../data/models/character/result.dart';
 
 import '../../../../../Core/utils/my_colors.dart';
 
