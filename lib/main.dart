@@ -21,18 +21,9 @@ class RickAndMortyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider<CharactersCubit>(
-          create: (context) => CharactersCubit(
-            getIt.get<HomeRepoImpl>(),
-          )..fetchCharacters(),
-        ),
-      ],
-      child: MaterialApp.router(
-        routerConfig: AppRouter.router,
-        builder: DevicePreview.appBuilder,
-      ),
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
+      builder: DevicePreview.appBuilder,
     );
   }
 }

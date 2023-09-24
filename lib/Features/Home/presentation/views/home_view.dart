@@ -25,6 +25,8 @@ class _HomeViewState extends State<HomeView> {
 
   // function to stop searching (BackButton)
   void stopSearching() {
+    BlocProvider.of<CharactersCubit>(context).searchCharacter('');
+    searchController!.clear();
     setState(() => isSearching = false);
   }
 
