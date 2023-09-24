@@ -14,17 +14,15 @@ class CharacterDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.appBarColor,
-      body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            CharacterDetailsViewAppBar(
-              characterResultModel: characterResultModel,
-            ),
-            CharacterDetailsViewBody(
-              characterResultModel: characterResultModel,
-            ),
-          ],
-        ),
+      body: CustomScrollView(
+        slivers: [
+          CharacterDetailsViewAppBar(
+            characterResultModel: characterResultModel,
+          ),
+          CharacterDetailsViewBody(
+            characterResultModel: characterResultModel,
+          ),
+        ],
       ),
     );
   }

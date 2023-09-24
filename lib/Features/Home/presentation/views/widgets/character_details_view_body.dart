@@ -40,7 +40,7 @@ class CharacterDetailsViewBody extends StatelessWidget {
                 const CustomDivider(endIndent: 300),
                 const AnimatedText(),
                 const SizedBox(
-                  height: 360,
+                  height: 395,
                 )
               ],
             ),
